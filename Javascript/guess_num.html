@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess the number game</h1>
+</body>
+<script>
+    let a=Math.random()*100;
+    a=Number.parseInt(a);
+    let score=100;
+    let inp;
+    while(inp!=a)
+    {
+        score=score-1;
+        inp=prompt("enter the num");
+        if(inp==a){
+            console.log('Congratulations ! you have guessed the number in ${100-score} attempts...')
+        }
+        else if(inp>a){
+            console.log("the input is greater than given number")
+        }
+        else if(inp<a){
+            console.log("the input is smaller than given number") 
+        }
+        else{
+            console.log("please enter valid input");
+        }
+    }
+</script>
+</html>
