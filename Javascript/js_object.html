@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Javascript object</h1>
+</body>
+<script>
+    console.clear()
+    var obj = {
+        name: 'sarthak',
+        age: 22,
+        gender: 'male'
+    }
+    console.log(obj);
+    console.log(typeof (obj));
+
+    console.log("more complex object example")
+    var myobj = {
+        color: 'blue',
+        type: 'racing-car',
+        myfun: function () {
+            setTimeout(function () {
+                console.log("mazi car servat best ahe...")
+            }, 5000)
+        }
+        
+    }
+    console.log(myobj.price)
+    console.log(myobj.color)
+    console.log(myobj.myfun())
+</script>
+
+</html>
