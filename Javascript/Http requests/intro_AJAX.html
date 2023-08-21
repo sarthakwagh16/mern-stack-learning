@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>introduction to AJAX</h1>
+    <h2>stands for asynchonous javascript and xml</h2>
+
+    <header id="head">
+        <section>
+            <button id="btn">Add item</button>
+            <ul id="my-list">
+                
+            </ul>
+        </section>
+    </header>
+</body>
+<script>
+
+    function getAjaxCall() {
+        //The XMLHttpRequest object can be used to request data from a web server
+        //here we have created the obj of xmlHttpReq using new keyword
+        var http = new XMLHttpRequest();
+
+        //it has open method and it accepts 3 parameters
+        //1. method: the type of request: GET or POST
+        //2. url: the server (file) location
+        //3. async: true (asynchronous) or false (synchronous)
+        http.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
+
+        //Sends the request to the server (used for GET)
+        http.send();
+    }
+    //call the function
+    //getAjaxCall();
+
+
+    var myList=document.getElementById('my-list');
+    function getCommentData() {
+        var http = new XMLHttpRequest();
+
+       
+        http.onreadystatechange = function stateChanged() {
+            if (this.readyState == 4) {
+                
+                if (this.status == 200) {
+                    var response=JSON.parse(this.responseText);
+                    for(var i=0;i<response.length;i++){
+                        myList.appendChild(createNewItem(response[i].postId, response[i].name));
+                    }
+                }
+            }
+        }
+        http.open('GET', 'https://jsonplaceholder.typicode.com/comments', true);
+        http.send();
+    }
+    //call the fun
+    getCommentData();
+
+
+ 
+
+
+
+</script>
+
+</html>

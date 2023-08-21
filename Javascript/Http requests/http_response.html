@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Handling http response</h1>
+    <h2>All the fetched data is:</h2>
+    <header>
+        <section>
+            <ul id="to-do">
+
+            </ul>
+            <button id="btn">add item</button>
+        </section>
+    </header>
+</body>
+
+<script>
+    var mylist = document.getElementById('to-do');
+
+    function createItem(id, name) {
+        var newEle = document.createElement('h4');
+        var txt = document.createTextNode(name);
+        newEle.id = id;
+        newEle.appendChild(txt);
+        mylist.appendChild(newEle);
+        return newEle;
+    }
+    function getDataFromBackEnd() {
+        var http = new XMLHttpRequest();
+
+        //handling the http response
+        // onreadystatechange=	Defines a function to be called when the readyState property changes
+        //The onreadystatechange function is called every time the readyState changes.
+        http.onreadystatechange = function () {
+            if (this.readyState == 4)
+            //readyState= Holds the status of the XMLHttpRequest
+                /*
+                0: request not initialized
+                1: server connection established
+                2: request received
+                3: processing request
+                4: request finished and response is ready
+                */ {
+                if (this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    for (var i = 0; i < response.length; i++) {
+                        mylist.appendChild(createItem(response[i].postId, response[i].name));
+                    }
+                }
+            }
+        }
+        http.open('GET', 'https://jsonplaceholder.typicode.com/comments', true);
+        http.send();
+    }
+    getDataFromBackEnd();
+</script>
+
+</html>
