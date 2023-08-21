@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: aqua;
+    }
+</style>
+<body>
+    
+</body>
+<script>
+
+    //keycode=this property writes the code for the key which have been pressed 
+    document.body.addEventListener('keydown', function(e){
+        var code=e.keyCode;
+        console.log(code+" key is down");
+    })
+    document.body.addEventListener('keyup', function(e){
+        var code=e.keyCode;
+        console.log(code+" key is up");
+    })
+    document.body.addEventListener('keypress', function(e){
+        var code=e.keyCode;
+        console.log(code+" key is press");
+    })
+</script>
+</html>

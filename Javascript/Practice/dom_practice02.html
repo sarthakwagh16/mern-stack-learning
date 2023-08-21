@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- <div>
+            <button id="btn">click me !</button>
+        </div> -->
+        <!-- <div>
+            <button id="incre">Font+</button>
+            <button id="decre">Font-</button>
+            <h1 id="text">Getting styles</h1>
+        </div> -->
+
+        <!-- create html element -->
+        <section>
+            <ul id="mylist">
+                <li>item 1</li>
+                <li>item 2</li>
+            </ul>
+            <button id="btn">add item</button>
+        </section>
+    </header>
+</body>
+<script>
+    // var mybtn=document.getElementById("btn");
+    // var bg=document.querySelector('header div');
+    // mybtn.addEventListener('click', ()=>{
+    //     bg.style.backgroundColor="red";
+    //     // alert("button clicked");
+    // })
+    // var bt1=document.getElementById("incre");
+    // var bt2=document.getElementById("decre");
+    // var txt=document.getElementById("text");
+
+    // bt1.addEventListener('click', ()=>{
+    //     txt.style.fontSize=100+"px";
+    // })
+    // bt2.addEventListener('click', ()=>{
+    //     txt.style.fontSize=20+"px";
+    // })
+
+
+
+    // create html element
+    
+    var newEle=document.createElement('li');
+    newEle.appendChild(document.createTextNode('item 03'));
+    console.log(newEle);
+
+    var myele=document.getElementById('mylist');
+    var add=document.getElementById('btn');
+    var n=3;
+    add.addEventListener('click', function(){
+       var newEle=document.createElement('li');
+       newEle.id=n;
+       var txt=document.createTextNode('item '+n);
+       newEle.appendChild(txt);
+       myele.appendChild(newEle);
+       n++;
+
+    })
+</script>
+</html>

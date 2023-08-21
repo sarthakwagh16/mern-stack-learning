@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section>
+            <input id="txtBox" type="text" name="enter item " placeholder="enter item name">
+            <ul id="to-do">
+                <li id="item1">item01</li>
+                <li id="item2">item02</li>
+            </ul>
+            <button id="btn">add item</button>
+            <button id="btnUpdate">update item</button>
+            <button id="btnRemove">remove item</button>
+        </section>
+    </header>
+</body>
+
+<script>
+    var list=document.getElementById('to-do');
+    var addbtn=document.getElementById('btn');
+
+    var inputBox=document.getElementById('txtBox');
+    var currInputVal='';
+    
+    inputBox.addEventListener('input', (e)=>{
+        currInputVal=e.target.value;
+    })
+    var n=1
+    addbtn.addEventListener('click', ()=>{
+        if(currInputVal!==null && currInputVal!==undefined && currInputVal!=='')
+        {
+
+            var newNode=document.createElement('li');
+            var txtNode=document.createTextNode(currInputVal);
+            newNode.appendChild(txtNode);
+            list.appendChild(newNode);
+           
+            inputBox.value='';
+            currInputVal='';
+        }
+        else{
+            alert('please enter a valid to-do item');
+        }
+    })
+
+    //update and remove html element
+    //1. update element
+    // use replaceChild property
+    // use FirstElementChild to access the first child of the given list here "item01"
+    // The firstElementChild property returns the first child element of the specified element.
+
+    var updateBtn=document.getElementById('btnUpdate');
+    
+
+    updateBtn.addEventListener('click', ()=>{
+        var firstEle=list.firstElementChild;
+        var newNode=document.createElement('li');
+        var txt=document.createTextNode(currInputVal);
+        newNode.appendChild(txt);
+
+
+        list.replaceChild(newNode, firstEle);
+        currInputVal='';
+        inputBox.value='';
+
+    })
+
+    //remove element
+    //use removeChild property of a dom
+    var removeBtn=document.getElementById('btnRemove');
+
+    removeBtn.addEventListener('click', ()=>{
+        var firstEle=list.firstElementChild;
+
+        list.removeChild(firstEle);
+    })
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 1000px;
+        width: 1000px;
+        
+    }
+    #val{
+       font-size: 1000px;
+        color: black;
+        align-items: center;
+    }
+</style>
+<body>
+    <header>
+        <div>
+            <h1 id="val">10</h1>
+        </div>
+    </header>
+</body>
+<script>
+    var count=document.getElementById('val')
+    var countEle=count.innerHTML;
+    setInterval(function(){
+        if(countEle>0){
+            countEle-=1;
+            count.innerHTML=countEle;
+            count.style.fontSize=countEle*100+"px";
+        }
+        return 0;
+    },1000)
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: aqua;
+    }
+    #login-form{
+        text-align: center;
+       
+    }
+</style>
+<body>
+    <head>
+        <form id="login-form">
+            <input id="name" type="text" name="username" placeholder="username">
+            <input id="password" type="password" name="password" placeholder="password">
+            <input id="btn" name="login" type="submit">
+        </form>
+    </head>
+    
+</body>
+<script>
+    var userName=document.getElementById("name");
+    var form=document.getElementById("login-form")
+
+   //input event =is used to accept the input from user
+    userName.addEventListener('input', function(event){
+        var currValue=event.target.value;
+        currValue=currValue.toUpperCase();
+        userName.value=currValue;
+    })
+
+    //focus event= is triggered when we focus on particular input field
+    userName.addEventListener('focus', function(){
+        console.log("input is focused")
+    })
+
+     //blur event= is triggered when we loses focus on particular input field
+     userName.addEventListener('blur', function(){
+        console.log("input is not focused")
+    })
+
+    //submit event=is triggered when the submit btn is clicked
+    form.addEventListener('submit', function(){
+        alert('form is submitted')
+    })
+</script>
+</html>

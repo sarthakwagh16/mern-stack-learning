@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section>
+            <input id="txtBox" type="text" name="enter item " placeholder="enter item name">
+            <ul id="to-do">
+
+            </ul>
+            <button id="btn">add item</button>
+        </section>
+    </header>
+</body>
+
+<script>
+    var list=document.getElementById('to-do');
+    var addbtn=document.getElementById('btn');
+
+    var inputBox=document.getElementById('txtBox');
+    var currInputVal='';
+    
+    inputBox.addEventListener('input', (e)=>{
+        currInputVal=e.target.value;
+    })
+    var n=1
+    addbtn.addEventListener('click', ()=>{
+        if(currInputVal!==null && currInputVal!==undefined && currInputVal!=='')
+        {
+
+            var newNode=document.createElement('li');
+            var txtNode=document.createTextNode(currInputVal);
+            newNode.appendChild(txtNode);
+            list.appendChild(newNode);
+           
+            inputBox.value='';
+            currInputVal='';
+        }
+        else{
+            alert('please enter a valid to-do item');
+        }
+
+        
+
+    })
+</script>
+</html>

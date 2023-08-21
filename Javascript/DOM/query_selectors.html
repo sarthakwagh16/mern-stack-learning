@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .intro {
+        color: red;
+        font-style: oblique;
+    }
+    .info{
+        color: green;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <h1 class="intro">Query selectors using JS in dom</h1>
+    <h2>these allows you to use css selectors to select html elements</h2>
+
+    <h2 class="info">querySelector() will select only the first element which is matching <br> querySelectorAll()
+     will select all the elements with matching styles</h2>
+</body>
+<script>
+    console.clear();
+
+    console.log(document.querySelector('.info '));
+    console.log(document.querySelectorAll('.intro '));
+
+</script>
+</html>

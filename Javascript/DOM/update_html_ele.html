@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="countdown" style="color: green;">10</h1>
+    
+    
+</body>
+<script>
+
+    var num=document.getElementById('countdown');
+
+
+    //innerhtml= it prints or access the content stored inside that particular id or class
+    //here it will print 10 coz 10 is present inside countdown id
+    var countEle=num.innerHTML;
+
+   
+
+    setInterval(function(){
+        if(countEle>0){
+
+            countEle-=1;
+            num.innerHTML=countEle;
+           
+            
+        }
+        
+        
+        
+    }, 1000)
+
+    
+</script>
+</html>

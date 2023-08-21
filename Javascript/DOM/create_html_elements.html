@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+        align-items: center;
+    }
+    #my-list li{
+        margin: 20px;
+        padding: 5px;
+        border: 2px solid black;
+        width: 100px;
+        background-color: antiquewhite;
+    }
+    #btn{
+        margin: 20px;
+        padding: 5px;
+        border: 2px solid black;
+        width: 100px;
+        background-color: rgb(240, 191, 127);
+
+    }
+    #btn:hover{
+        background-color: rgb(143, 241, 72);
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <header id="head">
+        <section>
+            <button id="btn">Add item</button>
+            <ul id="my-list">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+            </ul>
+        </section>
+    </header>
+</body>
+<script>
+    //createHtmlElement=this property is used to create new html element like p, div, li, etc.
+    //createTextNode=this property is used to give values to new html element like p, div, li, etc.
+    //appendChild=this property is used to connect newly formed element to old html element like p, div, li, etc.
+
+    //create new element
+    // var newEle = document.createElement('li');
+
+    //assign value 
+    //document.createTextNode("List Item 3");
+
+    //and append to prev elements
+    // newEle.appendChild(document.createTextNode("List Item 3"));
+    // newEle.id = "Item-3";
+    // console.log(newEle);
+
+
+    //create new ele after clicking btn
+    var btnAdd = document.getElementById('btn');
+    var myList=document.getElementById('my-list')
+
+    var cnt=2;
+    btnAdd.addEventListener('click', function () {
+        cnt+=1;
+        var newEle = document.createElement('li');
+        var textNode=document.createTextNode("List Item "+cnt);
+        newEle.appendChild(textNode);
+        newEle.id = cnt;
+        myList.appendChild(newEle);
+
+
+    })
+
+
+
+</script>
+
+</html>

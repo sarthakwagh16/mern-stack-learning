@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="myh1">We are learning how to access items by using dom operations</h1>
+    <p class="myP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minima ipsa sed vitae sequi cumque maiores
+        nobis quaerat, accusamus sint.</p> -->
+
+        <!-- update html element -->
+        <h1 id="countEle">10</h1>
+</body>
+<script>
+    console.clear();
+    // console.log(document.getElementById('myh1'));
+    // console.log(document.getElementsByClassName('myP'));
+    // console.log(document.getElementsByTagName('p'));
+
+    // update html element
+    
+    var cntEle=document.getElementById("countEle");
+
+    //access its value using innerHTML property
+    var initVal=cntEle.innerHTML;
+    setInterval(() => {
+        if(initVal>0){
+            initVal-=1;
+            cntEle.innerHTML=initVal;
+            cntEle.style.fontSize=initVal*100+"px";
+        }
+    }, 1000);
+    
+</script>
+
+</html>

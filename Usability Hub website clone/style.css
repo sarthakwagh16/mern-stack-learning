@@ -1,0 +1,349 @@
+/* roboto font */
+/* font-family: 'Roboto', sans-serif; */
+/* popins font */
+/*  font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* :root selector matches the document's root element. */
+    /* following are the variables , the var name should start with 2 dashes */
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+
+}
+
+body {
+    font-family: 'popins', 'sans-serif';
+    color: var(--primary-text-color);
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+ul {
+    list-style: none;
+}
+
+/* utility classes i.e. following properties are constant for all class elements */
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-links {
+    color: var(--primary-text-color);
+}
+
+.hover-links:hover {
+    color: var(--accent-color);
+    transition: 0.2 ease-out;
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    /* only the color of button would be white by any how */
+    padding: 12px 24px;
+    box-shadow: 0px 0px 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+    border: 0.5px solid var(--secondary-text-color);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+/* top banner */
+.top-banner {
+    background-image: url('./assets/top_banner_pattern.png');
+    background-color: #4fb3d4;
+    background-size: 300px;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+    /* make responsive */
+    overflow: hidden;
+}
+
+.banner-text {
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+/* nav bar */
+
+/* for responsive */
+.nav-toggle{
+    display: none;
+}
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+
+}
+
+.company-logo img {
+    width: 200px;
+}
+
+.nav-links {
+    /* The flex-basis property defines the size of the flex-item along the main axis of the flex container */
+    flex-basis: 730px;
+}
+
+.nav-links ul {
+    justify-content: end;
+    /* gap property defines the size of the gap between the rows and between the columns in flexbox */
+    gap: 40px;
+}
+
+/* header section */
+header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1 {
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 100%;
+}
+
+.get-started-button {
+    margin-top: 20px;
+}
+
+/* companies section */
+
+.companies-header {
+    text-align: center;
+    /* margin-block is used to give margin from top and botton */
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+
+.logos {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    height: 46px;
+}
+
+/* features section */
+
+.features-section {
+    padding: 80px var(--padding-inline-section) 0;
+    background-image: url('./assets/asset\ 34.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.features-section img {
+    width: 60px;
+}
+
+.features-header {
+    text-align: center;
+}
+
+.features-header h2 {
+    margin-bottom: 20px;
+}
+
+/* features cards */
+
+.features-area {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.features-card {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+
+/* big feature section */
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section) 0;
+}
+
+.big-feature-container {
+    gap: 30px;
+}
+
+.feature-img img {
+    width: 100%;
+}
+
+.feature-desc {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* example section */
+
+.examples-area {
+    margin-block: 30px;
+    justify-content: space-between;
+    /* for responsive */
+    flex-wrap: wrap;
+    
+}
+
+.examples-section-header {
+    padding: 80px var(--padding-inline-section) 0;
+}
+
+.examples-card {
+    width: 23%;
+    min-height: 300px;
+    position: relative;
+    background: black;
+    /* ithe jr lin gradient ni work ny kel tr black background work krel */
+    background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8)), url('./assets/asset\ 37.jpeg');
+    /* here lin gradient chya mage img aahe ..black effect show krnya sathi */
+    background-size: cover;
+    transition: 0.2s ease-out;
+}
+
+.examples-card:hover {
+    box-shadow: 0 0 10px #888;
+}
+
+.card-text {
+    /* here we have to place text at botton thats why we used position =absolute */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+
+/* CTA-section */
+
+.cta-section-content {
+    flex-direction: column;
+    gap: 30px;
+    color: white !important;
+}
+
+.cta-section {
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #183b54;
+
+}
+
+.cta-section p {
+    color: white;
+    margin-top: 20px;
+}
+
+/* footer section */
+
+footer {
+    padding-block: 80px;
+    background: #ebf2fa;
+}
+
+.link-columns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-container {
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* sub footer section */
+
+.sub-footer {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+
+}
+
+.sub-footer-container {
+    justify-content: center;
+    gap: 30px;
+}

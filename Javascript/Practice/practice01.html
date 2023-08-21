@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js practice</title>
+</head>
+<body>
+    <h1>Hello World !!</h1>
+    <h1>Now I am practicing javascript</h1>
+    
+</body>
+<script>
+    var a=10;
+    var b=20;
+    console.log(a+b);
+
+    let x="ab";
+    let y="c";
+    console.log(x+y);
+
+    console.log("operations on numbers:")
+    let d=a.toString();
+    console.log("type of 10 is: "+typeof(d));
+    let e=parseInt(x);
+    console.log("type of given var is: "+typeof(e));
+
+    let str="my name is \'sarthak'\ and I am the greatest in the world !!";
+    console.log(str);
+
+    console.log("conditionals and loops");
+    var num=20;
+    if(num>20){
+        console.log("greater than 20");
+    }
+    else if(num<20){
+        console.log("less than 20");
+    }
+    else{
+        console.log("equals to 20");
+    }
+
+    var arr=[1,2,3,4,5];
+    var i=0;
+    // while(i<arr.length){
+    //     console.log(arr[i]);
+    //     i++;
+    // }
+    arr.push(100);
+    arr.reverse();
+    while(i<arr.length){
+        console.log(arr[i]);
+        i++;
+    }
+
+    console.log("functions");
+    function bhaiSaab(name){
+        console.log("hello "+name+" "+"bhai ji !!")
+    }
+    bhaiSaab('aswinii');
+   var lists={
+    "name":"sarthak",
+    "roll":200
+   }
+   console.log(lists)
+
+</script>
+</html>
