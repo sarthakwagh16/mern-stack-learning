@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>introduction to json objects</h1>
 </body>
 
 <script>
     //normal object
-    var obj={
-        name:"sarthak", 
-        age:20
+    var obj = {
+        name: "sarthak",
+        age: 20
     }
     // console.log(obj);
     // console.log(obj.name);
 
     //Json obj are similar to js obj only diff is :"keys are also having double quotes"
-    var jsonObj={
-        "name":"nikitaZalte", 
-        "age":22,
-        "engaged":"no"
+    var jsonObj = {
+        "name": "nikitaZalte",
+        "age": 22,
+        "engaged": "no"
     }
     console.log(jsonObj.engaged);
 
     //we can also store json obj inside an array
-    var arr=[
-    {
-        "name":"nikitaZalte", 
-        "age":22,
-        "engaged":"no"
-    },
-    {
-        "name":"himanshi", 
-        "age":21,
-        "engaged":"no"
-    },
-    {
-        "name":"pranali", 
-        "age":23,
-        "engaged":"no"
-    }
+    var arr = [
+        {
+            "name": "nikitaZalte",
+            "age": 22,
+            "engaged": "no"
+        },
+        {
+            "name": "himanshi",
+            "age": 21,
+            "engaged": "no"
+        },
+        {
+            "name": "pranali",
+            "age": 23,
+            "engaged": "no"
+        }
     ]
     console.log(arr);
     console.log(arr[0]);
     console.log(arr[0].name);
 
-    var obj2={
-        "college":"kkwagh",
-        "ratings":3
+    var obj2 = {
+        "college": "kkwagh",
+        "ratings": 3
     }
 
     //we can convert json obj into string using JSON.stringify(obj-name) method
     console.log(JSON.stringify(obj2));
 </script>
+
 </html>
