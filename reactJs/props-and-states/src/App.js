@@ -6,6 +6,7 @@ import { Feel } from './components/Greet';
 import Channel from './components/Channel';
 
 import ChangeEvent from './components/ChangeEvent';
+import CChangeEvent from './components/CChangeEvent';
 
 
 //props are properties or the parameters we pass inside the component
@@ -21,6 +22,7 @@ function App() {
       <Channel />
 
       <ChangeEvent/>
+      <CChangeEvent/>
     </div>
   );
 }
