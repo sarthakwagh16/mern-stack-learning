@@ -8,6 +8,12 @@ import Channel from './components/Channel';
 import ChangeEvent from './components/ChangeEvent';
 import CChangeEvent from './components/CChangeEvent';
 
+//use of bind in event handling
+import EventBind from './components/EventBind';
+
+//passsing props 
+import EventProps from './components/EventProps';
+
 
 //props are properties or the parameters we pass inside the component
 //props are immutable i.e. it's value cannot be changed
@@ -23,6 +29,11 @@ function App() {
 
       <ChangeEvent/>
       <CChangeEvent/>
+
+      <EventBind/>
+
+      <EventProps roll="22"/>
+      
     </div>
   );
 }
