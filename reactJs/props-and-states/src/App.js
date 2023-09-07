@@ -13,6 +13,7 @@ import EventBind from './components/EventBind';
 
 //passsing props 
 import EventProps from './components/EventProps';
+import Fragments from './components/Fragments';
 
 
 //props are properties or the parameters we pass inside the component
@@ -34,6 +35,7 @@ function App() {
 
       <EventProps roll="22"/>
       
+      <Fragments/>
     </div>
   );
 }
