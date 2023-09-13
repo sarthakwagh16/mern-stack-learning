@@ -15,6 +15,8 @@ import EventBind from './components/EventBind';
 import EventProps from './components/EventProps';
 import Fragments from './components/Fragments';
 
+import Clock from './components/Clock';
+
 
 //props are properties or the parameters we pass inside the component
 //props are immutable i.e. it's value cannot be changed
@@ -36,6 +38,8 @@ function App() {
       <EventProps roll="22"/>
       
       <Fragments/>
+
+      <Clock/>
     </div>
   );
 }
