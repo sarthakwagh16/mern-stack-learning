@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//include external css file
+import './index.css';
 
 //syntax: render("kya likhna hai", "kha pr likhna hai")
 //ReactDOM.render(<h1>Hello World !</h1>, document.getElementById("root"));
@@ -17,7 +19,7 @@ ReactDOM.render(
 
 */
 
-//challenge 01: create simple web app
+/*challenge 01: create simple web app
 
 ReactDOM.render(
   <div>
@@ -31,6 +33,43 @@ ReactDOM.render(
       <li>friends</li>
     </ul>
   </div>,
+
+  document.getElementById('root')
+)
+
+*/
+
+//jsx expressions
+/*
+const name="sarthak";
+ReactDOM.render(
+  //first method
+  // <h1>My name is {name}</h1>
+
+  //second method using back ticks
+  <h1>{`My name is ${name}`}</h1>
+  ,
+  document.getElementById('root')
+)
+
+*/
+
+//ReactJs challenge 02: display current date and time
+const name="Sarthak";
+const date=new Date();
+const currDate=date.toLocaleDateString();
+const currTime=date.toLocaleTimeString();
+
+ReactDOM.render(
+  <>
+  <div className='headDiv'>
+
+  <h1>My name is {name}</h1>
+  <p>Current date is {currDate}</p>
+  <p>Current time is {currTime}</p>
+  </div>
+  </>,
+  
 
   document.getElementById('root')
 )
