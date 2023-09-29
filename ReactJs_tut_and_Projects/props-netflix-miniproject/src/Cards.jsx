@@ -1,26 +1,27 @@
 import React from "react";
 
+
 function Cards(props) {
     return (
+
         <>
-           
+               
+         
+                <div className="main-cards">
 
-                <div className="cards">
 
-                    <div className="card">
-                        <img src={props.imgsrc} alt='mypic' className="imgs" />
-                        <div className="card-info">
-                            <span className="card-category" >{props.category}</span>
-                            <h2 className="title">{props.title}</h2>
-                            <a href={props.link} alt="series link">
-                                <button className="btn">Click</button>
-                            </a>
-                        </div>
+                    <div className="cards">
+                        <img src={props.imgsrc} alt="pic" className="card-img" />
+
+                        <h1>{props.title}</h1>
+                        <p>{props.info}</p>
 
                     </div>
                 </div>
             
         </>
+
+
     )
 }
 export default Cards;
